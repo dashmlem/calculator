@@ -14,7 +14,7 @@
   }
   
 .Calculator{
-    background-color:hsl(207, 88.60%, 93.10%);
+    background-color: #ecf0f3;
     padding: 15px;
     border-radius:30px;
     box-shadow: inset 5px 5px 12px #ffffff,
@@ -39,11 +39,12 @@ input{
     margin-bottom: 30px;
     padding:20px;
 }
+
 button{
     height: 48px;
     width:48px;
     background-color:#ecf0f3;
-    box-shadow: -5px -5px 12px #ffffff
+    box-shadow: -5px -5px 12px #ffffff,
                 5px 5px 12px rgba(0,0,0,.16);
     border: none;
     border-radius: 50%;
@@ -51,5 +52,10 @@ button{
     font-size:16px;
 }
 .equal{
-    width WHAT hmmmm?
+    width: 115px;
+    border-radius: 40px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #ffffff,
+                    5px 5px 12px rgba(0,0,0,.1.6);
+
 }
