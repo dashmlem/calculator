@@ -6,21 +6,26 @@
     font-family:sans-serif;
     outline:none;
 }
-.Container {
-    height: 100vh;
+
+body {
+    background-color: #ecf0f3;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 320px;
+    padding: 20px;
   }
   
-.Calculator{
+.calculator{
     background-color: #ecf0f3;
-    padding: 15px;
-    border-radius:30px;
-    box-shadow: inset 5px 5px 12px #ffffff,
-                      5px 5px 12px rgba(0,0,0,.16);
-    display:grid;
-    grid-template-columns: repeat(4, 68px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #cbced1, -10px -10px 20px #ffffff;
 }
 input{
     grid-column: span 4;
@@ -40,22 +45,76 @@ input{
     padding:20px;
 }
 
+#outputscreen {
+    width: 100%;
+    height: 80px;
+    background-color: #ecf0f3;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 10px #cbced1, inset -5px -5px 10px #ffffff;
+    font-size: 32px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
 button{
-    height: 48px;
-    width:48px;
-    background-color:#ecf0f3;
-    box-shadow: -5px -5px 12px #ffffff,
-                5px 5px 12px rgba(0,0,0,.16);
+    background-color: #ecf0f3;
     border: none;
     border-radius: 50%;
-    margin:8px;
-    font-size:16px;
+    height: 60px;
+    font-size: 20px;
+    box-shadow: 5px 5px 10px #cbced1, -5px -5px 10px #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
-.equal{
-    width: 115px;
-    border-radius: 40px;
-    background-color: #ecf0f3;
-    box-shadow: -5px -5px 12px #ffffff,
-                    5px 5px 12px rgba(0,0,0,.1.6);
 
+button:hover {
+    background-color: #d1d9e6;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+.equal{
+    grid-column: span 2.52;
+    border-radius: 30px;
+    background-color: #4e4e4e;
+    color: white;
+    box-shadow: 5px 5px 10px #cbced1, -5px -5px 10px #ffffff;
+
+}
+
+.equal:hover {
+    background-color: #3a3a3a;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .calculator {
+        padding: 15px;
+    }
+
+    button {
+        height: 50px;
+        font-size: 18px;
+    }
+
+    #outputscreen {
+        height: 60px;
+        font-size: 28px;
+    }
 }
