@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Калькулятор</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -30,9 +29,12 @@
                 <button onclick="display('+')">+</button>
                 <button onclick="display('0')">0</button>
                 <button onclick="display('.')">.</button>
-                <button onclick="Calculate()" class="equal">=</button>
+                <button onclick="display('(')">(</button>
+                <button onclick="display(')')">)</button>
+                <button onclick="calculate()" class="equal">=</button>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
